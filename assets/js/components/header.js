@@ -1,8 +1,8 @@
 var React = require('react');
 var Link = require('react-router').Link;
 
-var App = React.createClass({
-    render: function () {
+var Header = React.createClass({
+    render() {
         return (
             <nav className="header navbar navbar-inverse">
                 <div className="container-fluid">
@@ -39,4 +39,4 @@ var App = React.createClass({
     }
 });
 
-module.exports = App;
+module.exports = Header;
