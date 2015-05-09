@@ -1,16 +1,17 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
 
 var Layout = React.createClass({
     propTypes: {
-        component: React.PropTypes.string.isRequired,
-        initialScript: React.PropTypes.string
+        title: PropTypes.string.isRequired,
+        component: PropTypes.string.isRequired,
+        initialScript: PropTypes.string
     },
-    render: function () {
+    render() {
         return (
             <html>
             <head lang="en">
                 <meta charSet="utf-8"/>
-                <title></title>
+                <title>{this.props.title}</title>
 
                 <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.css"/>
                 <link rel="stylesheet" href="/assets/_/styles.css"/>
