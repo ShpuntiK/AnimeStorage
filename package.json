@@ -4,8 +4,8 @@
   "description": "Sample app based on React and Flux with server rendering",
   "author": "Alexander Ivantsov <alexivantsov@ya.ru> (http://aivantsov.com)",
   "scripts": {
-    "start": "node server/index.js",
-    "build": "./node_modules/.bin/webpack --stats --progress --config"
+    "start": "node server/index",
+    "build": "./node_modules/.bin/webpack --p --config webpack.config"
   },
   "license": "MIT",
   "keywords": [
