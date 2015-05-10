@@ -1,0 +1,6 @@
+{
+    "script": "server/index",
+    "env": {
+        "NODE_ENV": "development"
+    }
+}
