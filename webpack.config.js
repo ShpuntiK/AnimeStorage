@@ -16,6 +16,9 @@ module.exports = {
         path: path.join(__dirname, 'assets/_'),
         filename: '[name].js'
     },
+    plugins: [
+        new ExtractTextPlugin('[name].css')
+    ],
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
@@ -23,13 +26,10 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             loaders: ['babel?stage=0'],
-            include: path.join(__dirname, 'assets')
+            include: path.join(__dirname, 'assets/js')
         }, {
             test: /\.less$/,
             loader: ExtractTextPlugin.extract('style-loader', styleLoaders.join('!'))
         }]
-    },
-    plugins: [
-        new ExtractTextPlugin('[name].css')
-    ]
+    }
 };

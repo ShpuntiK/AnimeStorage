@@ -22,7 +22,8 @@ function renderLayout(initialData, Handler) {
     var component = React.renderToString(<Handler initialData={initialData}/>);
 
     return React.renderToStaticMarkup(
-        <Layout title={DocumentTitle.rewind()}
+        <Layout environment={process.env.NODE_ENV}
+                title={DocumentTitle.rewind()}
                 component={component}
                 initialScript={initialScript}/>
     );
