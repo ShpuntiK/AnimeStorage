@@ -1,21 +1,29 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
+var {FluxMixin} = require('fluxxor');
 var DocumentTitle = require('react-document-title');
-var {Form, validator, fieldTypes} = require('../components/form');
+var {Form, validator, fieldTypes} = require('../components/common/form');
 
 var LoginPage = React.createClass({
+    mixins: [
+        FluxMixin(React)
+    ],
+    propTypes: {
+        flux: PropTypes.object.isRequired
+    },
     render() {
         var formProps = {
             fields: {
-                email: {
-                    type: fieldTypes.email,
-                    validator: validator.email
+                username: {
+                    type: fieldTypes.text,
+                    validator: validator.required
                 },
                 password: {
                     type: fieldTypes.password,
-                    validator: validator.minLength(8)
+                    validator: validator.required
                 }
             },
-            submitBtn: 'Login'
+            submitBtn: 'Login',
+            onSubmit: this.onSubmit
         };
 
         return (
@@ -31,6 +39,9 @@ var LoginPage = React.createClass({
                 </div>
             </DocumentTitle>
         );
+    },
+    onSubmit(data) {
+        this.getFlux().actions.user.login(data);
     }
 });
 
