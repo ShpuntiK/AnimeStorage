@@ -1,14 +1,26 @@
-var React = require('react');
+import React, {PropTypes} from 'react';
+var {FluxMixin} = require('fluxxor');
 var DocumentTitle = require('react-document-title');
-var {Form, validator, fieldTypes} = require('../components/form');
+var {Form, validator, fieldTypes} = require('../components/common/form');
 
 var SignUpPage = React.createClass({
+    mixins: [
+        FluxMixin(React)
+    ],
+    propTypes: {
+        flux: PropTypes.object.isRequired
+    },
+    //componentDidMount() {
+    //    if (!this.props.initialData) {
+    //        this.getFlux().actions.anime.loadDashboard();
+    //    }
+    //},
     render() {
         var formProps = {
             fields: {
-                email: {
-                    type: fieldTypes.email,
-                    validator: validator.email
+                username: {
+                    type: fieldTypes.text,
+                    validator: validator.required
                 },
                 password: {
                     type: fieldTypes.password,
@@ -34,7 +46,7 @@ var SignUpPage = React.createClass({
         );
     },
     onSubmit(data) {
-        console.log(data);
+        this.getFlux().actions.user.signUp(data);
     }
 });
 
