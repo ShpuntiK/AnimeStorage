@@ -1,3 +1,4 @@
 module.exports = {
-    notification: require('./notification')
+    notification: require('./notification'),
+    user: require('./user')
 };
