@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import Utils from '../../utils';
+var Utils = require('../../../utils');
 
 var Field = React.createClass({
     propTypes: {
