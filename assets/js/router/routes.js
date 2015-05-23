@@ -4,12 +4,12 @@ var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var NotFoundRoute = Router.NotFoundRoute;
 
-var NotFound = require('./pages/not-found');
-var App = require('./app/app');
-var Login = require('./pages/login');
-var SignUp = require('./pages/signup');
-var Dashboard = require('./pages/dashboard');
-var Profile = require('./pages/profile');
+var App = require('../app');
+var NotFound = require('../pages/not-found');
+var Login = require('../pages/login');
+var SignUp = require('../pages/signup');
+var Dashboard = require('../pages/dashboard');
+var Profile = require('../pages/profile');
 
 var routes = (
     <Route name="app" path="/" handler={App}>
