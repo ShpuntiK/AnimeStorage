@@ -9,7 +9,7 @@ var styleLoaders = [
 
 module.exports = {
     entry: {
-        scripts: './assets/js/router',
+        scripts: './assets/js/main',
         styles: './assets/less/main.less'
     },
     output: {

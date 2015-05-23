@@ -13,7 +13,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?' + host,
         'webpack/hot/only-dev-server',
-        './assets/js/router',
+        './assets/js/main',
         './assets/less/main.less'
     ],
     output: {
