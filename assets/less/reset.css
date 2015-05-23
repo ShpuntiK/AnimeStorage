@@ -9,3 +9,7 @@
 .help-block {
     position: absolute;
 }
+
+.alert {
+    margin-bottom: 10px;
+}
