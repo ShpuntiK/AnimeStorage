@@ -21,6 +21,7 @@ var Layout = React.createClass({
                 <meta charSet="utf-8"/>
                 <title>{title}</title>
 
+                <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32"/>
                 <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.css"/>
                 {environment !== 'development' && <link rel="stylesheet" href="/assets/_/styles.css"/>}
 
