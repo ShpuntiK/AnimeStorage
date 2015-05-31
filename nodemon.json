@@ -1,6 +1,7 @@
 {
     "script": "server/index",
     "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "HOST": "http://localhost:3000"
     }
 }

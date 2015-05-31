@@ -5,13 +5,13 @@ var Layout = React.createClass({
         environment: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         component: PropTypes.string.isRequired,
-        initialScript: PropTypes.string
+        storesInitialDataScript: PropTypes.string
     },
     render() {
         var {
             environment,
             title,
-            initialScript,
+            storesInitialDataScript,
             component
         } = this.props;
 
@@ -25,7 +25,7 @@ var Layout = React.createClass({
                 <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.css"/>
                 {environment !== 'development' && <link rel="stylesheet" href="/assets/_/styles.css"/>}
 
-                <script dangerouslySetInnerHTML={{__html: initialScript}}></script>
+                <script dangerouslySetInnerHTML={{__html: storesInitialDataScript}}></script>
             </head>
             <body>
             <div id="app" dangerouslySetInnerHTML={{__html: component}}/>
