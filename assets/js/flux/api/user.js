@@ -1,5 +1,3 @@
-// dashboard - все твои аниме, там же будет search типа найди новое и добавь его к своим аниме
-
 function sendRequest(url, data) {
     return fetch('/api/' + url, {
         method: 'post',
