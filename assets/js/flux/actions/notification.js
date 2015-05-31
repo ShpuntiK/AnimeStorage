@@ -1,10 +1,8 @@
 var Fluxxor = require('fluxxor');
 var constants = require('../constants');
 
-var actions = {
+module.exports = {
     hide(id) {
         this.dispatch(constants.HIDE_NOTIFICATION, id);
     }
 };
-
-module.exports = actions;

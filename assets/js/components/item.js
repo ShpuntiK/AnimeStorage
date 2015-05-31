@@ -1,7 +1,7 @@
 var React = require('react');
 
 var Item = React.createClass({
-    render: function () {
+    render() {
         return (
             <div className="list__item list-item panel panel-default">
                 <div className="panel-heading">

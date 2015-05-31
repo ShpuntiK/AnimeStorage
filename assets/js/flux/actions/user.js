@@ -20,7 +20,7 @@ function callAPI(method, data) {
         });
 }
 
-var actions = {
+module.exports = {
     signUp(data) {
         callAPI.call(this, 'signUp', data);
     },
@@ -28,5 +28,3 @@ var actions = {
         callAPI.call(this, 'login', data);
     }
 };
-
-module.exports = actions;
