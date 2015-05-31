@@ -1,4 +1,5 @@
 module.exports = {
     notification: require('./notification'),
-    user: require('./user')
+    user: require('./user'),
+    myAnime: require('./my-anime')
 };
